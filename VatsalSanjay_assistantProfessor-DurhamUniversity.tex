@@ -1,0 +1,111 @@
+\documentclass[11pt]{letter}    
+\usepackage[a4paper,left=1in,right=1in,top=1in,bottom=1in]{geometry} 
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage{seqsplit}
+
+\renewcommand{\familydefault}{\sfdefault} 
+\usepackage{setspace}  \onehalfspacing  
+\usepackage{graphicx}        
+\usepackage[absolute]{textpos}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{multirow}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue}
+}
+% Configurable separation between header and body
+\newlength{\headertobodysep}
+\setlength{\headertobodysep}{2.2cm}
+% Header with logos and contact information
+\begin{document}
+\thispagestyle{empty}
+
+% Lean header with aligned elements
+\textblockorigin{0pt}{0pt}
+
+% Durham logo on the left
+\begin{textblock*}{5cm}(1cm,1cm)
+    \includegraphics[height=2cm]{Durham-University.pdf}
+\end{textblock*}
+
+% Contact information in the center - vertically centered with logos
+\begin{textblock*}{8cm}(6.5cm,1cm)
+    \centering
+    {\large \textbf{Vatsal Sanjay}}, Assistant Professor\\[0.2em]
+    Department of Physics, Durham University\\[0.3em]
+    \href{https://vatsalsanjay.com}{vatsalsanjay.com} | \href{https://comphy-lab.org}{comphy-lab.org}
+\end{textblock*}
+
+% CoMPhy logo aligned with right margin
+\begin{textblock*}{3cm}(17.55cm,1cm) % exactly 1 cm away from the right edge
+    \includegraphics[height=2cm]{CoMPhy-Lab.png}
+\end{textblock*}
+
+% Reset to normal text flow after header
+\vspace*{\headertobodysep}
+% Define simple letter-like commands
+\newcommand{\letterdate}[1]{\vspace{2em}\noindent#1\par\vspace{1em}}
+\newcommand{\letteropening}[1]{\noindent#1\par\vspace{1em}}
+\newcommand{\letterclosing}[1]{\vspace{2em}\noindent#1\par}
+\newcommand{\lettersignature}[1]{\vspace{1em}\noindent#1\par}
+\newcommand{\letterenclosure}[1]{\vspace{1em}\noindent\textbf{Encl:} #1\par}
+\newcommand{\lettersubject}[1]{
+	\vspace{1em}
+	\noindent\textbf{Subject:} #1
+	\vspace{1em}
+}
+
+% Document body starts here
+
+% Date (uncomment and customize as needed)
+% \letterdate{\today}
+
+% Recipient's address (uncomment and customize as needed)
+% \begin{flushleft}
+% 	Recipient Name\\
+% 	Department\\
+% 	Institution\\
+% 	Address
+% \end{flushleft}
+
+% Subject line (uncomment and customize as needed)
+% \lettersubject{Subject of the letter}
+
+% Letter opening
+\letteropening{Dear [Recipient],}
+
+% Letter content goes here
+[Your letter content here]
+
+% Letter closing
+\letterclosing{Sincerely,}
+
+% Signature box for Adobe digital signature
+\vspace{0.5em}
+\noindent
+\framebox[6cm][c]{\parbox{3.8cm}{\centering\vspace{1.5cm}\textcolor{gray}{[Signature]}\vspace{1cm}}}
+
+% Printed name below signature
+\lettersignature{Vatsal Sanjay}
+
+% Contact details under signature with icons
+\vspace{0.25em}
+\noindent\small
+\begin{tabular}{@{}c@{\hspace{0.6em}}l@{}}
+\multirow{2}{*}{\faIcon{envelope}} & \href{mailto:vatsal.sanjay@durham.ac.uk}{vatsal.sanjay@durham.ac.uk}\\
+ & \href{mailto:vatsal.sanjay@comphy-lab.org}{vatsal.sanjay@comphy-lab.org}\\[0.2em]
+\faIcon{mobile-alt} & \href{tel:+447557500818}{+44-7557500818}\\
+\faIcon{phone} & \href{tel:+441913343642}{+44\ 191\ 334\ 3642}\\
+\end{tabular}
+
+% Optional enclosures
+% \letterenclosure{Document name}
+
+\end{document}
