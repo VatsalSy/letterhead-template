@@ -1,0 +1,18 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# macOS
+.DS_Store
+
+# PDF output (keep template PDF)
+!VatsalSanjay_assistantProfessor-DurhamUniversity.pdf
+
+# Backup files
+*~
+*.bak
