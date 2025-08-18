@@ -7,7 +7,7 @@
 \usepackage{seqsplit}
 
 \renewcommand{\familydefault}{\sfdefault} 
-\usepackage{setspace}  \onehalfspacing  
+\usepackage{setspace}  \singlespacing  
 \usepackage{graphicx}        
 \usepackage[absolute]{textpos}
 \usepackage{xcolor}
@@ -51,15 +51,15 @@
 % Reset to normal text flow after header
 \vspace*{\headertobodysep}
 % Define simple letter-like commands
-\newcommand{\letterdate}[1]{\vspace{2em}\noindent#1\par\vspace{1em}}
-\newcommand{\letteropening}[1]{\noindent#1\par\vspace{1em}}
-\newcommand{\letterclosing}[1]{\vspace{2em}\noindent#1\par}
-\newcommand{\lettersignature}[1]{\vspace{1em}\noindent#1\par}
-\newcommand{\letterenclosure}[1]{\vspace{1em}\noindent\textbf{Encl:} #1\par}
+\newcommand{\letterdate}[1]{\vspace{1em}\noindent#1\par\vspace{0.5em}}
+\newcommand{\letteropening}[1]{\noindent#1\par\vspace{0.5em}}
+\newcommand{\letterclosing}[1]{\vspace{1em}\noindent#1\par}
+\newcommand{\lettersignature}[1]{\vspace{0.5em}\noindent#1\par}
+\newcommand{\letterenclosure}[1]{\vspace{0.5em}\noindent\textbf{Encl:} #1\par}
 \newcommand{\lettersubject}[1]{
-	\vspace{1em}
+	\vspace{0.5em}
 	\noindent\textbf{Subject:} #1
-	\vspace{1em}
+	\vspace{0.5em}
 }
 
 % Document body starts here
@@ -90,7 +90,7 @@
 % Signature box for Adobe digital signature
 \vspace{0.5em}
 \noindent
-\framebox[6cm][c]{\parbox{3.8cm}{\centering\vspace{1.5cm}\textcolor{gray}{[Signature]}\vspace{1cm}}}
+\framebox[6cm][c]{\parbox{3.8cm}{\centering\vspace{1.5cm}\textcolor{gray}{}\vspace{1cm}}}
 
 % Printed name below signature
 \lettersignature{Vatsal Sanjay}
